@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Spy - Ultimate Chrome Extension for Image Performance Analysis</title>
+    <meta name="description" content="Lazy Spy is the ultimate Chrome extension for web developers and performance engineers who want to optimize image loading on any webpage. Visual analysis with color-coded overlays.">
+    <meta name="keywords" content="chrome extension, image optimization, lazy loading, web performance, Core Web Vitals, LCP, web development">
+    <meta name="author" content="Lazy Spy">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lazyspy.com/">
+    <meta property="og:title" content="Lazy Spy - Ultimate Chrome Extension for Image Performance Analysis">
+    <meta property="og:description" content="Visual analysis tool for image loading strategies with color-coded overlays and performance insights.">
+    <meta property="og:image" content="images/big-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lazyspy.com/">
+    <meta property="twitter:title" content="Lazy Spy - Ultimate Chrome Extension for Image Performance Analysis">
+    <meta property="twitter:description" content="Visual analysis tool for image loading strategies with color-coded overlays and performance insights.">
+    <meta property="twitter:image" content="images/big-logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icon16.png">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/lazyspylogo.png" alt="Lazy Spy Logo" class="logo-img">
+                <span class="logo-text">Lazy Spy</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#screenshots" class="nav-link">Screenshots</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+            </div>
+            <div class="nav-cta">
+                <a href="#download" class="btn btn-primary">Get Extension</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">🕵️</span>
+                    <span class="badge-text">Chrome Extension</span>
+                </div>
+                <h1 class="hero-title">
+                    The Ultimate Chrome Extension for 
+                    <span class="highlight">Image Performance Analysis</span>
+                </h1>
+                <p class="hero-description">
+                    Visually analyze image loading strategies on any webpage with color-coded overlays. 
+                    Detect lazy loading libraries, identify performance issues, and get actionable optimization recommendations.
+                </p>
+                <div class="hero-cta">
+                    <a href="#download" class="btn btn-primary btn-large">
+                        <img src="images/icon48.png" alt="Extension Icon" class="btn-icon">
+                        Add to Chrome - Free
+                    </a>
+                    <a href="#demo" class="btn btn-secondary btn-large">Watch Demo</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Lazy Loading Libraries</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Visual Analysis</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Setup Required</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/extention-screenshot-1.png" alt="Lazy Spy in Action" class="hero-screenshot">
+                <div class="hero-image-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Lazy Spy Does</h2>
+                <p class="section-subtitle">Comprehensive image performance analysis with actionable insights</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/icon-visual-analysis.svg" alt="Visual Analysis" class="icon-svg">
+                    </div>
+                    <h3 class="feature-title">Visual Analysis</h3>
+                    <p class="feature-description">Color-coded overlays show lazy loaded (blue), eager loaded (yellow), preloaded (teal), and problematic images (red)</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/icon-smart-detection.svg" alt="Smart Detection" class="icon-svg">
+                    </div>
+                    <h3 class="feature-title">Smart Detection</h3>
+                    <p class="feature-description">Automatically identifies native lazy loading, JavaScript libraries, and custom implementations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/icon-performance-insights.svg" alt="Performance Insights" class="icon-svg">
+                    </div>
+                    <h3 class="feature-title">Performance Insights</h3>
+                    <p class="feature-description">LCP detection, fetch priority analysis, CDN identification, and Core Web Vitals impact</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/icon-actionable-recommendations.svg" alt="Actionable Recommendations" class="icon-svg">
+                    </div>
+                    <h3 class="feature-title">Actionable Recommendations</h3>
+                    <p class="feature-description">Missing dimensions calculator, format conversion suggestions, preload opportunities</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/icon-library-support.svg" alt="Library Support" class="icon-svg">
+                    </div>
+                    <h3 class="feature-title">Library Support</h3>
+                    <p class="feature-description">Detects LazySizes, LoZad, React LazyLoad, Vue LazyLoad, Intersection Observer, and custom implementations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/icon-export-reports.svg" alt="Export Reports" class="icon-svg">
+                    </div>
+                    <h3 class="feature-title">Export Reports</h3>
+                    <p class="feature-description">Generate detailed CSV reports for team analysis and performance tracking</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Get started in seconds with our simple 4-step process</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Install Extension</h3>
+                    <p class="step-description">Add Lazy Spy to Chrome with one click from the Chrome Web Store</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Click Icon</h3>
+                    <p class="step-description">Navigate to any webpage and click the Lazy Spy extension icon</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Toggle Analysis</h3>
+                    <p class="step-description">Toggle on to see instant visual analysis with color-coded overlays</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Get Insights</h3>
+                    <p class="step-description">Hover over highlighted images for detailed performance data and recommendations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See Lazy Spy in Action</h2>
+                <p class="section-subtitle">Visual analysis that makes image performance optimization crystal clear</p>
+            </div>
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <img src="images/extention-screenshot-1.png" alt="Lazy Spy Analysis View" class="screenshot-img">
+                    <div class="screenshot-overlay">
+                        <h4>Visual Analysis</h4>
+                        <p>Color-coded overlays show loading strategies at a glance</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/extention-screenshot-2.png" alt="Performance Insights" class="screenshot-img">
+                    <div class="screenshot-overlay">
+                        <h4>Performance Insights</h4>
+                        <p>Detailed metrics and optimization recommendations</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/extention-screenshot-3.png" alt="Library Detection" class="screenshot-img">
+                    <div class="screenshot-overlay">
+                        <h4>Library Detection</h4>
+                        <p>Identify which lazy loading libraries are being used</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Highlights Section -->
+    <section class="technical-highlights">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Highlights</h2>
+                <p class="section-subtitle">Built for modern web development with cutting-edge performance analysis</p>
+            </div>
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <div class="highlight-icon">🚀</div>
+                    <h4>All Modern Loading Strategies</h4>
+                    <p>Supports native lazy, JS libraries, and custom implementations</p>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon">📊</div>
+                    <h4>Real-time Performance Scoring</h4>
+                    <p>Instant metrics and Core Web Vitals impact analysis</p>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon">⚛️</div>
+                    <h4>Framework-specific Detection</h4>
+                    <p>Specialized analysis for React, Vue, WordPress, and more</p>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon">☁️</div>
+                    <h4>CDN Optimization Analysis</h4>
+                    <p>Cloudinary, Imgix, and other CDN performance insights</p>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon">🖼️</div>
+                    <h4>Responsive Image Suggestions</h4>
+                    <p>WebP/AVIF format recommendations and responsive optimization</p>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon">🔧</div>
+                    <h4>Zero Configuration</h4>
+                    <p>Works instantly on any website without setup or configuration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perfect For Section -->
+    <section class="perfect-for">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Perfect For</h2>
+                <p class="section-subtitle">Whether you're a developer, engineer, or performance enthusiast</p>
+            </div>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">👨‍💻</div>
+                    <h3>Web Developers</h3>
+                    <p>Optimize site performance and implement best practices for image loading</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">⚡</div>
+                    <h3>Performance Engineers</h3>
+                    <p>Audit image strategies and improve Core Web Vitals scores</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">👥</div>
+                    <h3>Development Teams</h3>
+                    <p>Implement Core Web Vitals improvements with actionable insights</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">🎯</div>
+                    <h3>Performance Enthusiasts</h3>
+                    <p>Understand how images load on websites and identify optimization opportunities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content">
+                <h2 class="download-title">Start Optimizing Your Website's Image Performance Today!</h2>
+                <p class="download-description">
+                    Join thousands of developers who are already using Lazy Spy to improve their website performance. 
+                    No technical setup required - just install and analyze any website instantly!
+                </p>
+                <div class="download-cta">
+                    <a href="#" class="btn btn-primary btn-large">
+                        <img src="images/icon48.png" alt="Extension Icon" class="btn-icon">
+                        Add to Chrome - Free
+                    </a>
+                    <p class="download-note">* Coming soon to Chrome Web Store</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/lazyspylogo.png" alt="Lazy Spy Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">Lazy Spy</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#features" class="footer-link">Features</a>
+                    <a href="#how-it-works" class="footer-link">How It Works</a>
+                    <a href="#screenshots" class="footer-link">Screenshots</a>
+                    <a href="#download" class="footer-link">Download</a>
+                </div>
+                <div class="footer-social">
+                    <p>&copy; 2025 Lazy Spy. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

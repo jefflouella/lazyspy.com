@@ -245,6 +245,46 @@ p {
     font-size: 0.85rem;
 }
 
+.install-guide-link {
+    margin-bottom: 1.5rem;
+}
+
+.install-guide-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #dc2626;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.25rem 0;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.install-guide-link a:hover {
+    color: #991b1b;
+    border-bottom-color: #991b1b;
+    transform: translateX(2px);
+}
+
+.link-icon {
+    font-size: 0.9rem;
+}
+
+.link-text {
+    font-size: 0.85rem;
+}
+
+.link-arrow {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.install-guide-link a:hover .link-arrow {
+    transform: translateX(3px);
+}
+
 .hero-title {
     margin-bottom: 1.5rem;
     color: #1a1a1a;

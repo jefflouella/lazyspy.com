@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
     initButtonEffects();
     initScreenshotHover();
+    initAnalyticsTracking();
 });
 
 // Navbar functionality
@@ -363,3 +364,192 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Analytics Tracking
+function initAnalyticsTracking() {
+    // Track downloads
+    const downloadButtons = document.querySelectorAll('a[href*="lazyspy-extension.zip"]');
+    downloadButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const buttonLocation = this.closest('section')?.id || 'unknown';
+            gtag('event', 'download', {
+                'event_category': 'extension',
+                'event_label': buttonLocation,
+                'custom_parameter_1': buttonLocation,
+                'custom_parameter_2': 'developer',
+                'value': 1
+            });
+            
+            // Track conversion
+            gtag('event', 'conversion', {
+                'send_to': 'G-03BF0CSG4W/extension_download',
+                'value': 1,
+                'currency': 'USD'
+            });
+        });
+    });
+
+    // Track feature card interactions
+    const featureCards = document.querySelectorAll('.feature-card');
+    featureCards.forEach((card, index) => {
+        card.addEventListener('click', function() {
+            const featureName = this.querySelector('.feature-title')?.textContent || `feature_${index}`;
+            gtag('event', 'feature_click', {
+                'event_category': 'features',
+                'event_label': featureName,
+                'custom_parameter_3': featureName
+            });
+        });
+    });
+
+    // Track screenshot interactions
+    const screenshots = document.querySelectorAll('.screenshot-item');
+    screenshots.forEach((screenshot, index) => {
+        screenshot.addEventListener('click', function() {
+            gtag('event', 'screenshot_click', {
+                'event_category': 'screenshots',
+                'event_label': `screenshot_${index + 1}`,
+                'custom_parameter_3': 'screenshot_view'
+            });
+        });
+    });
+
+    // Track installation guide clicks
+    const installGuideLink = document.querySelector('.install-guide-link a');
+    if (installGuideLink) {
+        installGuideLink.addEventListener('click', function() {
+            gtag('event', 'external_link_click', {
+                'event_category': 'help',
+                'event_label': 'installation_guide',
+                'custom_parameter_1': 'external_guide',
+                'custom_parameter_2': 'new_user'
+            });
+        });
+    }
+
+    // Track scroll depth
+    let maxScroll = 0;
+    window.addEventListener('scroll', function() {
+        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        if (scrollPercent > maxScroll) {
+            maxScroll = scrollPercent;
+            
+            // Track scroll milestones
+            if (maxScroll >= 25 && maxScroll < 50) {
+                gtag('event', 'scroll', {
+                    'event_category': 'engagement',
+                    'event_label': '25_percent',
+                    'custom_parameter_2': 'engaged_user'
+                });
+            } else if (maxScroll >= 50 && maxScroll < 75) {
+                gtag('event', 'scroll', {
+                    'event_category': 'engagement',
+                    'event_label': '50_percent',
+                    'custom_parameter_2': 'highly_engaged'
+                });
+            } else if (maxScroll >= 75) {
+                gtag('event', 'scroll', {
+                    'event_category': 'engagement',
+                    'event_label': '75_percent',
+                    'custom_parameter_2': 'very_engaged'
+                });
+            }
+        }
+    });
+
+    // Track time on page
+    let startTime = Date.now();
+    window.addEventListener('beforeunload', function() {
+        const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+        gtag('event', 'timing_complete', {
+            'name': 'page_view',
+            'value': timeOnPage,
+            'custom_parameter_2': timeOnPage > 30 ? 'engaged' : 'bounce'
+        });
+    });
+
+    // Track button hover interactions
+    const allButtons = document.querySelectorAll('.btn');
+    allButtons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+            const buttonText = this.textContent.trim();
+            gtag('event', 'button_hover', {
+                'event_category': 'interaction',
+                'event_label': buttonText,
+                'custom_parameter_1': 'button_interaction'
+            });
+        });
+    });
+
+    // Track navigation clicks
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const sectionName = this.getAttribute('href')?.replace('#', '') || 'unknown';
+            gtag('event', 'navigation_click', {
+                'event_category': 'navigation',
+                'event_label': sectionName,
+                'custom_parameter_1': 'nav_interaction'
+            });
+        });
+    });
+
+    // Track form interactions (if any forms are added later)
+    document.addEventListener('submit', function(e) {
+        if (e.target.tagName === 'FORM') {
+            gtag('event', 'form_submit', {
+                'event_category': 'forms',
+                'event_label': e.target.id || 'contact_form',
+                'custom_parameter_1': 'form_interaction'
+            });
+        }
+    });
+
+    // Track page load performance
+    window.addEventListener('load', function() {
+        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+        gtag('event', 'timing_complete', {
+            'name': 'page_load',
+            'value': loadTime,
+            'custom_parameter_1': 'performance'
+        });
+    });
+
+    // Track user engagement with development notice
+    const devNotice = document.querySelector('.development-notice');
+    if (devNotice) {
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    gtag('event', 'notice_view', {
+                        'event_category': 'engagement',
+                        'event_label': 'development_notice',
+                        'custom_parameter_2': 'new_user'
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+        observer.observe(devNotice);
+    }
+
+    // Track feature section visibility
+    const featuresSection = document.querySelector('#features');
+    if (featuresSection) {
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    gtag('event', 'section_view', {
+                        'event_category': 'engagement',
+                        'event_label': 'features_section',
+                        'custom_parameter_3': 'feature_interest'
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+        observer.observe(featuresSection);
+    }
+
+    console.log('Analytics tracking initialized');
+}

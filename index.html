@@ -8,6 +8,7 @@
     <meta name="keywords" content="chrome extension, image optimization, lazy loading, web performance, Core Web Vitals, LCP, web development">
     <meta name="author" content="Lazy Spy">
     <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://lazyspy.com/">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -29,6 +30,143 @@
     
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-03BF0CSG4W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-03BF0CSG4W', {
+            page_title: 'Lazy Spy - Chrome Extension',
+            page_location: window.location.href,
+            custom_map: {
+                'custom_parameter_1': 'download_source',
+                'custom_parameter_2': 'user_type',
+                'custom_parameter_3': 'feature_interest'
+            }
+        });
+    </script>
+    
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Lazy Spy",
+        "description": "Lazy Spy is a free Chrome extension empowering web developers and performance engineers to master image loading optimization. Gain a competitive edge with visual analysis, color-coded overlays, and actionable insights—all within your browser.",
+        "applicationCategory": "BrowserApplication",
+        "applicationSubCategory": "BrowserExtension",
+        "operatingSystem": "Chrome OS, Windows, macOS, Linux (Requires Google Chrome browser)",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "url": "https://lazyspy.com",
+        "downloadUrl": "https://lazyspy.com/downloads/lazyspy-extension.zip",
+        "installUrl": "https://lazyspy.com/downloads/lazyspy-extension.zip",
+        "browserRequirements": "Requires Google Chrome",
+        "keywords": "image optimization, lazy loading, web performance, Core Web Vitals, Chrome extension, performance analysis, visual debugging, web development",
+        "screenshot": [
+            "https://lazyspy.com/images/extention-screenshot-1.png",
+            "https://lazyspy.com/images/extention-screenshot-2.png",
+            "https://lazyspy.com/images/extention-screenshot-3.png"
+        ],
+        "featureList": [
+            "Visual analysis with color-coded overlays",
+            "Smart detection of lazy loading libraries",
+            "Performance insights and Core Web Vitals analysis",
+            "Actionable optimization recommendations",
+            "Support for multiple frameworks",
+            "Export detailed CSV reports"
+        ],
+        "audience": {
+            "@type": "Audience",
+            "audienceType": [
+                "Web Developers",
+                "Performance Engineers",
+                "Frontend Developers",
+                "SEO Specialists",
+                "UX Designers"
+            ]
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Jeff Louella",
+            "url": "https://www.jefflouella.com",
+            "sameAs": [
+                "https://github.com/jefflouella",
+                "https://www.linkedin.com/in/jefflouella/",
+                "https://x.com/jefflouella",
+                "https://thetechseo.com",
+                "https://www.youtube.com/@JeffLouella"
+            ]
+        },
+        "provider": {
+            "@type": "Person",
+            "name": "Jeff Louella",
+            "url": "https://www.jefflouella.com"
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "Jeff Louella",
+            "url": "https://www.jefflouella.com"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://lazyspy.com"
+        },
+        "softwareHelp": {
+            "@type": "WebPage",
+            "name": "Lazy Spy Support",
+            "url": "https://www.jefflouella.com/support-lazyspy"
+        },
+        "releaseNotes": "https://lazyspy.com#changelog",
+        "softwareVersion": "1.0.0"
+    }
+    </script>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Lazy Spy",
+        "url": "https://lazyspy.com/",
+        "logo": "https://lazyspy.com/images/big-logo.png",
+        "description": "Developer tools for web performance optimization",
+        "sameAs": [
+            "https://github.com/jefflouella/lazyspy.com"
+        ]
+    }
+    </script>
+    
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Lazy Spy - Chrome Extension for Image Performance Analysis",
+        "description": "Download Lazy Spy Chrome extension for visual analysis of image loading strategies with color-coded overlays and performance insights.",
+        "url": "https://lazyspy.com/",
+        "mainEntity": {
+            "@type": "SoftwareApplication",
+            "name": "Lazy Spy"
+        },
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://lazyspy.com/"
+                }
+            ]
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -293,6 +431,51 @@
                     <div class="audience-icon">🎯</div>
                     <h3>Performance Enthusiasts</h3>
                     <p>Understand how images load on websites and identify optimization opportunities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- From the Creator Section -->
+    <section class="creator-section">
+        <div class="container">
+            <div class="creator-content">
+                <div class="creator-main">
+                    <h2 class="creator-title">FROM THE CREATOR, JEFF LOUELLA</h2>
+                    <div class="creator-text">
+                        <p>Hi, I'm Jeff Louella, an independent software developer passionate about creating tools that make complex data accessible and actionable. Lazy Spy was born from my desire to bring more transparency and analytical power to the everyday web performance workflow and for professionals needing deeper image optimization insights.</p>
+                        <p>Lazy Spy is a free tool, and I'm committed to keeping its core features accessible to everyone. If you find Lazy Spy valuable and would like to support its continued development, maintenance, and future enhancements, please consider:</p>
+                    </div>
+                    <div class="creator-links">
+                        <a href="https://www.jefflouella.com" target="_blank" rel="noopener noreferrer" class="creator-link">Learn more about my other projects at jefflouella.com</a>
+                        <div class="social-icons">
+                            <a href="https://github.com/jefflouella" target="_blank" rel="noopener noreferrer" class="social-icon">
+                                <img src="images/github.svg" alt="GitHub" class="social-svg">
+                            </a>
+                            <a href="https://www.linkedin.com/in/jefflouella/" target="_blank" rel="noopener noreferrer" class="social-icon">
+                                <img src="images/linkedin.svg" alt="LinkedIn" class="social-svg">
+                            </a>
+                            <a href="https://x.com/jefflouella" target="_blank" rel="noopener noreferrer" class="social-icon">
+                                <img src="images/x.svg" alt="X (Twitter)" class="social-svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="creator-sidebar">
+                    <div class="support-section">
+                        <h3 class="support-title">SUPPORT LAZY SPY</h3>
+                        <a href="https://www.buymeacoffee.com/jlou" target="_blank" rel="noopener noreferrer" class="support-button">
+                            Support My Work on Buy Me A Coffee
+                        </a>
+                    </div>
+                    <div class="review-section">
+                        <h3 class="review-title">LEAVE A REVIEW</h3>
+                        <p class="review-text">Leave a positive review on the <a href="#" class="review-link">Chrome Web Store</a>.</p>
+                    </div>
+                    <div class="share-section">
+                        <h3 class="share-title">SPREAD THE WORD</h3>
+                        <p class="share-text">Share Lazy Spy with friends or colleagues who might find it useful!</p>
+                    </div>
                 </div>
             </div>
         </div>

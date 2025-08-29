@@ -392,10 +392,11 @@ p {
 }
 
 .section-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #4a5568;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
+    white-space: nowrap;
 }
 
 /* Features Section */

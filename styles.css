@@ -795,10 +795,11 @@ p {
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     transition: all 0.3s ease;
     text-align: center;
     width: 100%;
+    white-space: nowrap;
 }
 
 .support-button:hover {

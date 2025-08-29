@@ -1086,8 +1086,9 @@ p {
 }
 
 .extension-card:nth-child(2) .extension-logo-img {
-    width: 128px;
-    height: 128px;
+    width: 120px;
+    height: 80px;
+    object-fit: contain;
 }
 
 .extension-title {

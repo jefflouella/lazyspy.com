@@ -1,5 +1,2 @@
 User-agent: *
-Disallow: /
-
-# Block all search engines from indexing this site
-# Remove this file when ready to launch
+Allow: /

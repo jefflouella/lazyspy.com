@@ -1063,6 +1063,9 @@ p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .extension-card:hover {
@@ -1080,6 +1083,11 @@ p {
     width: 64px;
     height: 64px;
     object-fit: contain;
+}
+
+.extension-card:nth-child(2) .extension-logo-img {
+    width: 128px;
+    height: 128px;
 }
 
 .extension-title {
@@ -1110,6 +1118,7 @@ p {
     text-align: center;
     width: 100%;
     transition: background-color 0.3s ease;
+    margin-top: auto;
 }
 
 .extension-link:hover {
